@@ -23,7 +23,7 @@ class GoogleMapsIntegration {
     async getMapsResponse(address) {
       try {
         const url = new URL(
-          `${process.env.GEO_MAPS}?address=${address}&key=${process.env.GEO_KEY}`
+          `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.GEO_KEY}`
         );
         const datapoints = await axios.get(url.toString());
         return datapoints.data.results[0];
