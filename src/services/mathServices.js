@@ -23,25 +23,17 @@ class MathService {
       return finalResult;
     }
     calculateEucledianDistance(firstAddress, nextAddress) {
-      const pi = 3.14;
-      const earthRadius = 6371;
       const firstLat = firstAddress.location.lat;
       const secondLat = nextAddress.location.lat;
       const firstLng = firstAddress.location.lng;
       const secondLng = nextAddress.location.lng;
-      const deltaLat = (firstLat * pi) / 180 - (secondLat * pi) / 180;
-  
-      const deltaLong = (firstLng * pi) / 180 - (secondLng * pi) / 180;
-  
-      const abscissPairs = deltaLong * Math.cos((firstLat + secondLat) / 2);
-  
-      const pythagorianDistance =
-        earthRadius * Math.hypot(abscissPairs, deltaLat);
-  
+
+      const result = Math.sqrt(((firstLat-secondLat)*(firstLat-secondLat))+((firstLng-secondLng)-(firstLng-secondLng)))
+
       return {
         origin: firstAddress.address,
         destination: nextAddress.address,
-        distance: pythagorianDistance.toFixed(2) + " km",
+        distance: result.toFixed(4),
       };
     }
   };
