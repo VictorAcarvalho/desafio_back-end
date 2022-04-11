@@ -1,4 +1,4 @@
-import { googleMapsIntegration } from '../integrations/geoLocationAPI';
+import { googleMapsIntegration } from '../integrations/geoLocationAPI.js';
 
 class AddressServices {
     async getAddress(addresses) {
