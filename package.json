@@ -1,0 +1,17 @@
+{
+  "name": "calindra-back",
+  "version": "1.0.0",
+  "description": "Api que retorna a distancia euclidiana entre duas localizacoes",
+  "main": "index.js",
+  "author": "Victor Alves de Carvalho",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}
